@@ -1,0 +1,80 @@
+.maintitle {
+	font: 30px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: white;
+}
+a {
+  color: #00B7FF;
+}
+textarea {
+    resize: none;
+}
+span.displayurl {
+	color:#006621;
+	font-size:14px;
+  margin-left:2px;
+}
+span.description {
+	font-size:small;
+	color:#545454;
+}
+a.headline {
+    font-size: 18px;
+    font-weight: normal;
+    color: #1a0dab;
+}
+.mobiletopheadline {
+    font-size: 16px;
+    font-weight: normal;
+    color: #1a0dab;
+}
+span.finalurl {
+	color:#006621;
+	font-size:14px;
+  	margin-left:2px;
+}
+.AdIcon {
+	background-color: #59946b;
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    padding: 0 2px;
+    line-height: 14px;
+    vertical-align: baseline;
+}
+.Desktop {
+      background: #fff;
+    border: 1px solid #ccc;
+    padding: 7px 5px!important;
+    margin: 0;
+}
+.Device {
+      color: rgba(0,0,0,.54);
+    margin: 8px 0 5px;
+}
+
+.Mobile {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 7px 5px!important;
+    margin: 0;
+    width:400px;
+}
+.MobileTop {
+  margin: 0px 10px 10px 10px;
+}
+.MobileBottom {
+  margin: 0px 10px 0px 10px;
+}
+.MobileDivider {
+  border-bottom: 1px solid #ebebeb;
+  margin: 9px -3px 10px;
+}
+.controls{
+  padding:1.2rem;
+}
