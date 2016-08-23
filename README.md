@@ -8,3 +8,4 @@ Built with bootstrap and Jquery(reluctantly)
 
 //----To-Do-------//
 Rebuild with vanilla JS
+Add clear all button

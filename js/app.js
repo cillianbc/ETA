@@ -37,11 +37,13 @@ function SetCharacterMessage(elementID, messageID, maxchars)
 
 function BuildAdvert()
 {
-
-		if ($('#headline1').val().length>0)
+	let headline = document.getElementById('headline1')
+	let headline2 = document.getElementById('headline2')
+	let description = document.getElementById('description')
+		if (headline.value.length>0)
 	  	{
-	  		$('#Desktop_Headline1').html($('#headline1').val());
-	  		$('#Mobile_Headline1').html($('#headline1').val());
+	  		$('#Desktop_Headline1').html(headline.value);
+	  		$('#Mobile_Headline1').html(headline.value);
 	  	}
 
 
@@ -52,17 +54,17 @@ function BuildAdvert()
 	  	}
 
 
-	  	if ($('#headline2').val().length>0)
+	  	if (headline2.value.length>0)
 	  	{
-	  		$('#Desktop_Headline2').html(' - ' + $('#headline2').val());
-	  		$('#Mobile_Headline2').html(' - ' + $('#headline2').val());
+	  		$('#Desktop_Headline2').html(' - ' + headline2.value);
+	  		$('#Mobile_Headline2').html(' - ' + headline2.value);
 	  	}
 
 
-	  	if ($('#description').val().length>0)
+	  	if (description.value.length>0)
 	  	{
-	  		$('#Desktop_description').html($('#description').val());
-	  		$('#Mobile_description').html($('#description').val());
+	  		$('#Desktop_description').html(description.value);
+	  		$('#Mobile_description').html(description.value);
 	  	}
 
 
