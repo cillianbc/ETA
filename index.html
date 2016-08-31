@@ -6,10 +6,13 @@
   <title>Expanded Text Ad Preview Tool</title>
   <!-- Latest compiled and minified CSS -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/bootstrap.min.js"></script>
+
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -29,17 +32,18 @@
 
   <div class="row">
     <div class="col-lg-6 col-md-6">
+      <div class="row">
       <form role="form">
         <div class="form-group">
+
           <div class="controls">
-            <div class="input-group header">
-              <span class="input-group-addon">Final URL</span><input id="finalurl" name=
-              "finalurl" placeholder="Final URL" class="form-control" />
+            <div class="input-group ">
+              <span class="input-group-addon">Final URL</span><input id="finalurl" name="finalurl" placeholder="Final URL" class="form-control" />
             </div>
           </div>
 
           <div class="controls">
-            <div class="input-group header">
+            <div class="input-group ">
               <span class="input-group-addon">Headline 1</span><input id="headline1"
               name="headline1" placeholder="Headline 1" class="form-control" />
               <span class="input-group-addon"><span id="headline1_count_message" class=
@@ -48,7 +52,7 @@
           </div>
 
           <div class="controls">
-            <div class="input-group header">
+            <div class="input-group ">
               <span class="input-group-addon">Headline 2</span><input id="headline2"
               name="headline2" placeholder="Headline 2" class="form-control" />
               <span class="input-group-addon"><span id="headline2_count_message" class=
@@ -57,17 +61,19 @@
           </div>
 
           <div class="controls">
-            <div class="input-group header">
+            <div class="input-group ">
               <span class="input-group-addon">Description</span>
               <textarea id="description" name="description" placeholder="Description"
-              class="form-control">
-</textarea> <span class="input-group-addon"><span id="description_count_message"
+              class="form-control"></textarea>
+              <span class="input-group-addon"><span id="description_count_message"
               class="pull-right">80</span></span>
             </div>
           </div>
 
+          <!--URl Display Paths  -->
+
           <div class="controls">
-            <div class="input-group header">
+            <div class="input-group ">
               <span class="input-group-addon">Path 1</span><input id="path1" name="path1"
               placeholder="Path1" class="form-control" /> <span class=
               "input-group-addon"><span id="path1_count_message" class=
@@ -78,10 +84,213 @@
               "path2_count_message" class="pull-right">15</span></span>
             </div>
           </div>
-        </div>
-      </form><!-- /col-md-6-->
-    </div>
 
+          <!-- Call Outs  -->
+
+          <h2>Call Outs</h2>
+          <div class="controls">
+            <div class="input-group ">
+              <input id="call1" name="call1"
+              placeholder="Call Out 1" class="form-control" /> <span class=
+              "input-group-addon"><span id="call1_count_message" class=
+              "pull-right">25</span></span>
+            <input id="call2" name="call2" placeholder="Call Out 2" class=
+              "form-control" /> <span class="input-group-addon"><span id=
+              "call2_count_message" class="pull-right">25</span></span>
+            </div>
+          </div>
+
+          <div class="controls">
+            <div class="input-group ">
+              <input id="call3" name="call3"
+              placeholder="Call Out 3" class="form-control" /> <span class=
+              "input-group-addon"><span id="call3_count_message" class=
+              "pull-right">25</span></span>
+              <input id="call4" name="call4" placeholder="Call Out 4" class=
+              "form-control" /> <span class="input-group-addon"><span id=
+              "call4_count_message" class="pull-right">25</span></span>
+            </div>
+          </div>
+
+          <!--Structured Snippets  -->
+
+          <h2>Structured Snippets</h2>
+          <!-- Single button -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Categories<span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Amenities</a></li>
+              <li><a href="#">Brands</a></li>
+              <li><a href="#">Courses</a></li>
+              <li><a href="#">Degree Programs</a></li>
+              <li><a href="#">Destinations</a></li>
+              <li><a href="#">Featured Hotels</a></li>
+              <li><a href="#">Insurance Coverage</a></li>
+              <li><a href="#">Neighbourhoods</a></li>
+              <li><a href="#">Service Catalogue</a></li>
+              <li><a href="#">Shows</a></li>
+              <li><a href="#">Styles</a></li>
+              <li><a href="#">Types</a></li>
+            </ul>
+          </div>
+
+          <div class="controls">
+            <div class="input-group ">
+              <input id="snip_value1" name="snip_value1"
+              placeholder="Snippet Text 1" class="form-control" /> <span class=
+              "input-group-addon"><span id="snip1_count_message" class=
+              "pull-right">25</span></span>
+              <input id="snip_value2" name="snip_value2" placeholder="Snippet Text 2" class=
+              "form-control" /> <span class="input-group-addon"><span id=
+              "snip2_count_message" class="pull-right">25</span></span>
+              <input id="snip_value3" name="snip_value3" placeholder="Snippet Text 3" class=
+              "form-control" /> <span class="input-group-addon"><span id=
+              "snip3_count_message" class="pull-right">25</span></span>
+            </div>
+          </div>
+
+        </div>
+      </form>
+    </div><!-- /col-md-6-->
+    </div>
+    <div class="col-lg-6 col-md-6">
+      <div class="row">
+      <form role="form">
+        <div class="form-group">
+        <!-- Beginning of Ad extensions -->
+          <h4>Sitelink 1</h4>
+        <!-- Sitelinks 1 -->
+        <div class="controls">
+          <div class="input-group input-group-md">
+            <span class="input-group-addon">Headline </span><input id="site-link1-head"
+            name="sitelink1_headline1" placeholder="Headline 1" class="form-control" />
+            <span class="input-group-addon"><span id="head_count_message" class=
+            "pull-right">25</span></span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="input-group input-group-sm">
+            <span class="input-group-addon">Description Line 1</span>
+            <textarea id="site-link1-desc1" name="sitelink1_description1" placeholder="Description"
+            class="form-control"></textarea>
+            <span class="input-group-addon"><span id="desc1_count_message"
+            class="pull-right">35</span></span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="input-group input-group-sm">
+            <span class="input-group-addon">Description Line 2</span>
+            <textarea id="site-link1-desc2" name="sitelink1_description2" placeholder="Description"
+            class="form-control"></textarea>
+            <span class="input-group-addon"><span id="desc2_count_message"
+            class="pull-right">35</span></span>
+          </div>
+        </div>
+
+        <!-- Sitelinks 2 -->
+        <h4>Sitelink 2</h4>
+        <div class="controls">
+          <div class="input-group input-group-md">
+            <span class="input-group-addon">Headline 1</span><input id="site-link2-head"
+            name="sitelink1_headline2" placeholder="Headline 1" class="form-control" />
+            <span class="input-group-addon"><span id="link2_head_count_message" class=
+            "pull-right">25</span></span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="input-group input-group-sm">
+            <span class="input-group-addon">Description Line 1</span>
+            <textarea id="site-link2-desc1" name="sitelink2_description1" placeholder="Description"
+            class="form-control"></textarea>
+            <span class="input-group-addon"><span id="link2_desc1_count_message"
+            class="pull-right">35</span></span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="input-group input-group-sm">
+            <span class="input-group-addon">Description Line 2</span>
+            <textarea id="site-link2-desc2" name="sitelink2_description2" placeholder="Description"
+            class="form-control"></textarea>
+            <span class="input-group-addon"><span id="link2_desc2_count_message"
+            class="pull-right">35</span></span>
+          </div>
+        </div>
+
+        <!-- Sitelinks 3 -->
+        <h4>Sitelink 3</h4>
+        <div class="controls">
+          <div class="input-group input-group-md">
+            <span class="input-group-addon">Headline 1</span><input id="site-link3-head"
+            name="sitelink1_headline3" placeholder="Headline 1" class="form-control" />
+            <span class="input-group-addon"><span id="link3_head_count_message" class=
+            "pull-right">25</span></span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="input-group input-group-sm">
+            <span class="input-group-addon">Description Line 1</span>
+            <textarea id="site-link3-desc1" name="sitelink3_description1" placeholder="Description"
+            class="form-control"></textarea>
+            <span class="input-group-addon"><span id="link3_desc1_count_message"
+            class="pull-right">35</span></span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="input-group input-group-sm">
+            <span class="input-group-addon">Description Line 2</span>
+            <textarea id="site-link3-desc2" name="sitelink3_description2" placeholder="Description"
+            class="form-control"></textarea>
+            <span class="input-group-addon"><span id="link3_desc2_count_message"
+            class="pull-right">35</span></span>
+          </div>
+        </div>
+
+        <!-- Sitelinks 4 -->
+        <h4>Sitelink 4</h4>
+        <div class="controls">
+          <div class="input-group input-group-md">
+            <span class="input-group-addon">Headline 1</span><input id="site-link4-head"
+            name="sitelink1_headline4" placeholder="Headline 1" class="form-control" />
+            <span class="input-group-addon"><span id="link4_head_count_message" class=
+            "pull-right">25</span></span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="input-group input-group-sm">
+            <span class="input-group-addon">Description Line 1</span>
+            <textarea id="site-link4-desc1" name="sitelink4_description1" placeholder="Description"
+            class="form-control"></textarea>
+            <span class="input-group-addon"><span id="link4_desc1_count_message"
+            class="pull-right">35</span></span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="input-group input-group-sm">
+            <span class="input-group-addon">Description Line 2</span>
+            <textarea id="site-link4-desc2" name="sitelink4_description2" placeholder="Description"
+            class="form-control"></textarea>
+            <span class="input-group-addon"><span id="link4_desc2_count_message"
+            class="pull-right">35</span></span>
+          </div>
+        </div>
+
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+    <div class="col-lg-3 col-md-3">
+    </div>
     <div class="col-lg-6 col-md-6">
       <div class="row">
         <div class="Device">
@@ -115,6 +324,9 @@
           </div>
         </div>
       </div>
+
+    </div>
+    <div class="col-lg-3 col-md-3">
     </div>
   </div>
   <!-- DOM Utility functions -->

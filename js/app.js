@@ -4,8 +4,24 @@ $( document ).ready(function() {
 	SetCharacterMessage('headline1', 'headline1_count_message', 30);
 	SetCharacterMessage('headline2', 'headline2_count_message', 30);
 	SetCharacterMessage('description', 'description_count_message', 80);
-	SetCharacterMessage('path1', 'path1_count_message', 15);
-	SetCharacterMessage('path2', 'path2_count_message', 15);
+	SetCharacterMessage('path1', 'path1_count_message', 25);
+	SetCharacterMessage('path2', 'path2_count_message', 25);
+	SetCharacterMessage('call1', 'call1_count_message', 25);
+	SetCharacterMessage('call2', 'call2_count_message', 25);
+	SetCharacterMessage('call3', 'call3_count_message', 25);
+	SetCharacterMessage('call4', 'call4_count_message', 25);
+	SetCharacterMessage('site-link1-desc1', 'desc1_count_message', 35);
+	SetCharacterMessage('site-link1-desc2', 'desc2_count_message', 35);
+	SetCharacterMessage('site-link1-head', 'head_count_message', 25);
+	SetCharacterMessage('site-link2-desc1', 'link2_desc1_count_message', 35);
+	SetCharacterMessage('site-link2-desc2', 'link2_desc2_count_message', 35);
+	SetCharacterMessage('site-link2-head', 'link2_head_count_message', 25);
+	SetCharacterMessage('site-link3-desc1', 'link3_desc1_count_message', 35);
+	SetCharacterMessage('site-link3-desc2', 'link3_desc2_count_message', 35);
+	SetCharacterMessage('site-link3-head', 'link3_head_count_message', 25);
+	SetCharacterMessage('site-link4-desc1', 'link4_desc1_count_message', 35);
+	SetCharacterMessage('site-link4-desc2', 'link4_desc2_count_message', 35);
+	SetCharacterMessage('site-link4-head', 'link4_head_count_message', 25);
 
 	$('#finalurl').keyup(function() {
 		BuildAdvert();
