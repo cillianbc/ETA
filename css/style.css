@@ -78,3 +78,19 @@ span.finalurl {
 .controls{
   padding:1.2rem;
 }
+.social{
+  width:100%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+/*justify-content: flex-start | flex-end | center | space-between | space-around*/
+
+.social img{
+  width:50px;
+
+}
+.social li{
+   list-style:none;
+   justify-content: space-between;
+}
