@@ -1,3 +1,19 @@
+
+let finalUrl = document.getElementById('finalurl')
+let headline = document.getElementById('headline1')
+let headline2 = document.getElementById('headline2')
+let description = document.getElementById('description')
+
+let desktopUrl = document.getElementById('Desktop_finalurl')
+let desktopHeadline1 = document.getElementById('Desktop_Headline1')
+let desktopHeadline2 = document.getElementById('Desktop_Headline2')
+let desktopDescription = document.getElementById('Desktop_description')
+
+let mobileUrl = document.getElementById('Mobile_finalurl')
+let mobileHeadline1 = document.getElementById('Mobile_Headline1')
+let mobileHeadline2 = document.getElementById('Mobile_Headline2')
+let mobileDescription = document.getElementById('Mobile_description')
+
 $( document ).ready(function() {
 
 
@@ -7,9 +23,13 @@ $( document ).ready(function() {
 	SetCharacterMessage('path1', 'path1_count_message', 15);
 	SetCharacterMessage('path2', 'path2_count_message', 15);
 
-	$('#finalurl').keyup(function() {
-		BuildAdvert();
-	});
+
+	finalUrl.onkeyup = function(){
+		BuildAdvert()
+	}
+	// $('#finalurl').keyup(function() {
+	// 	BuildAdvert();
+	// });
 
 
 });
@@ -37,34 +57,32 @@ function SetCharacterMessage(elementID, messageID, maxchars)
 
 function BuildAdvert()
 {
-	let headline = document.getElementById('headline1')
-	let headline2 = document.getElementById('headline2')
-	let description = document.getElementById('description')
+
 		if (headline.value.length>0)
 	  	{
-	  		$('#Desktop_Headline1').html(headline.value);
-	  		$('#Mobile_Headline1').html(headline.value);
+	  		desktopHeadline1.innerHTML = headline.value;
+	  		mobileHeadline1.innerHTML = headline.value;
 	  	}
 
 
-	  	if ($('#Desktop_Headline2').val().length==0)
+	  	if (headline2.value.length==0)
 	  	{
-	  		$('#Desktop_Headline2').html('');
-	  		$('#Mobile_Headline2').html('');
+	  		desktopHeadline2.innerHTML = '';
+	  		mobileHeadline2.innerHTML = '';
 	  	}
 
 
 	  	if (headline2.value.length>0)
 	  	{
-	  		$('#Desktop_Headline2').html(' - ' + headline2.value);
-	  		$('#Mobile_Headline2').html(' - ' + headline2.value);
+	  		desktopHeadline2.innerHTML = ' - ' + headline2.value;
+	  		mobileHeadline2.innerHTML = ' - ' + headline2.value;
 	  	}
 
 
 	  	if (description.value.length>0)
 	  	{
-	  		$('#Desktop_description').html(description.value);
-	  		$('#Mobile_description').html(description.value);
+	  		desktopDescription.innerHTML = description.value;
+	  		mobileDescription.innerHTML = description.value;
 	  	}
 
 
@@ -102,12 +120,12 @@ function BuildURL()
 
 	if (AdText.length>0)
 	{
-		$('#Desktop_finalurl').html(Prefix+AdText+Suffix);
-		$('#Mobile_finalurl').html(Prefix+AdText+Suffix);
+		desktopUrl.innerHTML = Prefix+AdText+Suffix
+		mobileUrl.innerHTML = Prefix+AdText+Suffix;
 	}
 	else
 	{
-		$('#Desktop_finalurl').html('www.example.com');
-		$('#Mobile_finalurl').html(Prefix+AdText+Suffix);
+		desktopUrl.innerHTML = 'www.example.com';
+		mobileUrl.innerHTML = Prefix+AdText+Suffix;
 	}
 }
