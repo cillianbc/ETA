@@ -1,4 +1,4 @@
-Expanded Text Ad Preview Tool
+Expanded Text Ad Preview Tool - https://cillianbc.github.io/ETA/
 
 Inspired by http://www.brainlabsdigital.com/
 
