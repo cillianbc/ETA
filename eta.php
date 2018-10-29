@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html>
-<?php
-include_once "header.php";
- ?>
-<body>
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5MBSVL"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  <a href="mailto:info@cillianbc.com"><img src="cillianbc-Logo@2x.jpg" alt="cillianbc" style="height: 100px;" class=
-  "center-block" /></a>
+<?php /* Template Name: ETA page */ 
+get_header(); ?>
+
 
   <h1 align="center">Expanded Text Ads Preview Tool</h1>
 
   <div class="row">
-    <div class="col-lg-6 col-md-6">
+    <div class="col-lg-12 col-md-12">
       <form role="form">
         <div class="form-group">
           <div class="controls">
@@ -38,6 +29,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <span class="input-group-addon">Headline 2</span><input id="headline2"
               name="headline2" placeholder="Headline 2" class="form-control" />
               <span class="input-group-addon"><span id="headline2_count_message" class=
+              "pull-right">30</span></span>
+            </div>
+          </div>
+          
+          <div class="controls">
+            <div class="input-group header">
+              <span class="input-group-addon">Headline 3</span><input id="headline3"
+              name="headline3" placeholder="Headline 3" class="form-control" />
+              <span class="input-group-addon"><span id="headline3_count_message" class=
               "pull-right">30</span></span>
             </div>
           </div>
@@ -68,13 +68,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </form><!-- /col-md-6-->
     </div>
 
-    <div class="col-lg-6 col-md-6">
+    <div class="col-lg-12 col-md-12">
       <div class="row">
         <div class="Device">
-          Desktop
+          <p>Desktop</p>
 
           <div class="Desktop">
-            <a href="" class="headline ng-binding"><span id="Desktop_Headline1" class="headline">Headline 1</span> <span id="Desktop_Headline2" class="headline">- Headline 2</span></a><br />
+            <a href="" class="headline ng-binding"><span id="Desktop_Headline1" class="headline">Headline 1</span> <span id="Desktop_Headline2" class="headline">| Headline 2</span><span id="Desktop_Headline3" class="headline"> | Headline 3</span></a><br />
             <span class="AdIcon">Ad</span> <span id="Desktop_finalurl" class=
             "finalurl">www.example.com</span><br />
             <span id="Desktop_description" class="description">Description</span>
@@ -84,11 +84,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="row">
         <div class="Device">
-          Mobile
+          <p>Mobile</p>
 
-          <div class="Mobile">
+          <div class="col-lg-6 col-md-6 Mobile">
             <div class="MobileTop">
-              <a href="" class="headline ng-binding"><span id="Mobile_Headline1" class="mobiletopheadline">Headline 1</span><span id="Mobile_Headline2" class="mobiletopheadline">- Headline 2</span></a><br />
+              <a href="" class="headline ng-binding"><span id="Mobile_Headline1" class="mobiletopheadline">Headline 1</span><span id="Mobile_Headline2" class="mobiletopheadline"> | Headline 2</span><span id="Mobile_Headline3" class="mobiletopheadline"> | Headline 3</span></a><br />
               <span class="AdIcon">Ad</span> <span id="Mobile_finalurl" class=
               "finalurl">www.example.com</span>
             </div>
@@ -103,20 +103,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <footer>
+    <?php 
+    $img_middle = get_field('img_middle'); 
+    $img_left = get_field('img_left');
+    $img_right = get_field('img_right'); 
+    ?>
       <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
         <ul class="social">
-          <li><a href="https://github.com/cillianbc"><img src="GitHub-Mark-120px-plus.png"</a></a></li>
-          <li><a href="https://www.linkedin.com/in/cillianbc"><img src="In-2C-121px-R.png"</a></a></li>
-          <li><a href="https://twitter.com/cillianbc"><img src="twitter.png"</a></a></li>
+          <li><a href="https://github.com/cillianbc"><img src="<?php  echo $img_left['url'] ?>"</a></a></li>
+          <li><a href="https://www.linkedin.com/in/cillianbc"><img src="<?php echo $img_middle['url'] ?>"</a></a></li>
+          <li><a href="https://twitter.com/cillianbc"><img src="<?php echo $img_right['url'] ?>"</a></a></li>
         </ul>
       </div>
     </footer>
   </div>
-  <!-- DOM Utility functions -->
-  <script src="https://rawgit.com/jesstelford/a981e6877034231bd43b526a07b3a7b4/raw/js1-utilities.js"></script>
-  <script src="js/app.js"></script>
-  <script src="https://wzrd.in/standalone/tldjs">
-</script>
-
-</body>
-</html>
+<?php get_footer();
