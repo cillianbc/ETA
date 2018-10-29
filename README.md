@@ -1,4 +1,4 @@
-Expanded Text Ad Preview Tool - https://cillianbc.com/ETA/
+Expanded Text Ad Preview Tool - https://cillianbc.com/expanded-text-ad-preview-tool/
 
 Inspired by http://www.brainlabsdigital.com/
 
@@ -6,6 +6,8 @@ Domain checking done by the great tld.js - https://github.com/oncletom/tld.js/bl
 
 Built with bootstrap and Jquery(reluctantly)
 
+**2018 - Rebuilt with just vanilla JS
+
 //----To-Do-------//
-Rebuild with vanilla JS
+Add download button
 Add clear all button
