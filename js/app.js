@@ -2,16 +2,19 @@
 	let finalUrl = document.getElementById('finalurl')
 	let headline = document.getElementById('headline1')
 	let headline2 = document.getElementById('headline2')
+	let headline3 = document.getElementById('headline3')
 	let description = document.getElementById('description')
 
 	let desktopUrl = document.getElementById('Desktop_finalurl')
 	let desktopHeadline1 = document.getElementById('Desktop_Headline1')
 	let desktopHeadline2 = document.getElementById('Desktop_Headline2')
+	let desktopHeadline3 = document.getElementById('Desktop_Headline3')
 	let desktopDescription = document.getElementById('Desktop_description')
 
 	let mobileUrl = document.getElementById('Mobile_finalurl')
 	let mobileHeadline1 = document.getElementById('Mobile_Headline1')
 	let mobileHeadline2 = document.getElementById('Mobile_Headline2')
+	let mobileHeadline3 = document.getElementById('Mobile_Headline3')
 	let mobileDescription = document.getElementById('Mobile_description')
 
 	let path1 = document.getElementById('path1')
@@ -19,6 +22,7 @@
 
 	SetCharacterMessage('headline1', 'headline1_count_message', 30);
 	SetCharacterMessage('headline2', 'headline2_count_message', 30);
+	SetCharacterMessage('headline3', 'headline3_count_message', 30);
 	SetCharacterMessage('description', 'description_count_message', 80);
 	SetCharacterMessage('path1', 'path1_count_message', 15);
 	SetCharacterMessage('path2', 'path2_count_message', 15);
@@ -35,18 +39,18 @@
 
 	function SetCharacterMessage(elementID, messageID, maxchars)
 	{
-		$('#' + messageID).html(maxchars);
+		document.getElementById(messageID).innerHTML = maxchars;
 
-		$('#' + elementID).keyup(function() {
-		  var text_length = $('#' + elementID).val().length;
+		document.getElementById(elementID).addEventListener("keyup",function() {
+		  var text_length = document.getElementById(elementID).value.length;
 		  var text_remaining = maxchars - text_length;
 
-		  $('#' + messageID).html(text_remaining);
+		  document.getElementById(messageID).innerHTML = text_remaining;
 		  if (text_remaining<0)
 		  {
-		  	$('#' + messageID).css("color", "#FF0000");
+			document.getElementById(messageID).style.color ="#FF0000";
 		  } else {
-		  	$('#' + messageID).css("color", "#000000");
+			document.getElementById(messageID).style.color = "#000000";
 		  }
 
 		  BuildAdvert();
@@ -60,20 +64,38 @@
 		  	{
 		  		desktopHeadline1.innerHTML = headline.value;
 		  		mobileHeadline1.innerHTML = headline.value;
+			}
+			  if (headline.value.length==0)
+		  	{
+		  		desktopHeadline1.innerHTML = 'Headline 1';
+		  		mobileHeadline1.innerHTML = 'Headline 1';
 		  	}
 
 
 		  	if (headline2.value.length==0)
 		  	{
-		  		desktopHeadline2.innerHTML = '';
-		  		mobileHeadline2.innerHTML = '';
+		  		desktopHeadline2.innerHTML = ' | Headline 2';
+		  		mobileHeadline2.innerHTML = '| Headline 2';
 		  	}
 
 
 		  	if (headline2.value.length>0)
 		  	{
-		  		desktopHeadline2.innerHTML = ' - ' + headline2.value;
-		  		mobileHeadline2.innerHTML = ' - ' + headline2.value;
+		  		desktopHeadline2.innerHTML = ' | ' + headline2.value;
+		  		mobileHeadline2.innerHTML = ' | ' + headline2.value;
+			}
+			  
+			  if (headline3.value.length==0)
+		  	{
+		  		desktopHeadline3.innerHTML = ' | Headline 3';
+		  		mobileHeadline3.innerHTML = ' | Headline 3';
+		  	}
+
+
+		  	if (headline3.value.length>0)
+		  	{
+		  		desktopHeadline3.innerHTML = ' | ' + headline3.value;
+		  		mobileHeadline3.innerHTML = ' | ' + headline3.value;
 		  	}
 
 
